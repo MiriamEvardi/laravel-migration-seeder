@@ -23,19 +23,19 @@
         </thead>
         <tbody>
             @foreach ($trains as $train)
-            @if ($train->Giorno_di_partenza >= '2024-04-10')
+            @if ($train->departure_date >= '2024-04-10')
             <tr>
                 <td>{{ $train->id }}</td>
-                <td>{{ $train->Stazione_di_partenza }}</td>
-                <td>{{ $train->Stazione_di_arrivo }}</td>
-                <td>{{ $train->Azienda }}</td>
-                <td>{{ $train->Orario_di_partenza }}</td>
-                <td>{{ $train->Giorno_di_partenza }}</td>
-                <td>{{ $train->Orario_di_arrivo }}</td>
-                <td>{{ $train->Codice_Treno }}</td>
-                <td>{{ $train->Numero_Carrozze }}</td>
-                <td>{{ $train->In_orario ? 'In orario' : '' }}</td>
-                <td>{{ $train->Cancellato ? 'Cancellato' : '' }}</td>
+                <td>{{ $train->departure_station }}</td>
+                <td>{{ $train->arrival_station }}</td>
+                <td>{{ $train->company }}</td>
+                <td>{{ $train->departure_time }}</td>
+                <td>{{ $train->departure_date }}</td>
+                <td>{{ $train->arrival_time }}</td>
+                <td>{{ $train->train_code }}</td>
+                <td>{{ $train->carriage_number }}</td>
+                <td>{{ $train->in_time ? 'In orario' : '' }}</td>
+                <td>{{ $train->deleted ? 'Cancellato' : '' }}</td>
             </tr>
             @endif
             @endforeach
