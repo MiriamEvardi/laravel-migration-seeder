@@ -23,7 +23,7 @@
         </thead>
         <tbody>
             @foreach ($trains as $train)
-            @if ($train->Giorno_di_partenza == '2024-04-10')
+            @if ($train->Giorno_di_partenza >= '2024-04-10')
             <tr>
                 <td>{{ $train->id }}</td>
                 <td>{{ $train->Stazione_di_partenza }}</td>
